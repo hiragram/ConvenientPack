@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		603469D121A93FEA00A31F35 /* ConvenientPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 603469CF21A93FEA00A31F35 /* ConvenientPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60E86B0121A9427300699506 /* RepositoryInjectableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFA21A9427300699506 /* RepositoryInjectableViewModel.swift */; };
+		60E86B0221A9427300699506 /* XibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFB21A9427300699506 /* XibInstantiatable.swift */; };
+		60E86B0321A9427300699506 /* ViewModelInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFC21A9427300699506 /* ViewModelInjectable.swift */; };
+		60E86B0421A9427300699506 /* ReactiveModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFD21A9427300699506 /* ReactiveModal.swift */; };
+		60E86B0521A9427300699506 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFE21A9427300699506 /* UIViewController+extension.swift */; };
+		60E86B0621A9427300699506 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFF21A9427300699506 /* RootViewController.swift */; };
+		60E86B0721A9427300699506 /* uninitialized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86B0021A9427300699506 /* uninitialized.swift */; };
+		60E86B0B21A9461500699506 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E86B0921A9461500699506 /* RxCocoa.framework */; };
+		60E86B0C21A9461500699506 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E86B0A21A9461500699506 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		603469CC21A93FEA00A31F35 /* ConvenientPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConvenientPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		603469CF21A93FEA00A31F35 /* ConvenientPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvenientPack.h; sourceTree = "<group>"; };
 		603469D021A93FEA00A31F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60E86AFA21A9427300699506 /* RepositoryInjectableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryInjectableViewModel.swift; sourceTree = "<group>"; };
+		60E86AFB21A9427300699506 /* XibInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibInstantiatable.swift; sourceTree = "<group>"; };
+		60E86AFC21A9427300699506 /* ViewModelInjectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelInjectable.swift; sourceTree = "<group>"; };
+		60E86AFD21A9427300699506 /* ReactiveModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveModal.swift; sourceTree = "<group>"; };
+		60E86AFE21A9427300699506 /* UIViewController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		60E86AFF21A9427300699506 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		60E86B0021A9427300699506 /* uninitialized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uninitialized.swift; sourceTree = "<group>"; };
+		60E86B0921A9461500699506 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		60E86B0A21A9461500699506 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E86B0C21A9461500699506 /* RxSwift.framework in Frameworks */,
+				60E86B0B21A9461500699506 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,6 +50,7 @@
 		603469C221A93FEA00A31F35 = {
 			isa = PBXGroup;
 			children = (
+				60E86B0821A9460B00699506 /* Dependencies */,
 				603469CE21A93FEA00A31F35 /* ConvenientPack */,
 				603469CD21A93FEA00A31F35 /* Products */,
 			);
@@ -46,10 +67,26 @@
 		603469CE21A93FEA00A31F35 /* ConvenientPack */ = {
 			isa = PBXGroup;
 			children = (
+				60E86AFD21A9427300699506 /* ReactiveModal.swift */,
+				60E86AFA21A9427300699506 /* RepositoryInjectableViewModel.swift */,
+				60E86AFF21A9427300699506 /* RootViewController.swift */,
+				60E86AFE21A9427300699506 /* UIViewController+extension.swift */,
+				60E86B0021A9427300699506 /* uninitialized.swift */,
+				60E86AFC21A9427300699506 /* ViewModelInjectable.swift */,
+				60E86AFB21A9427300699506 /* XibInstantiatable.swift */,
 				603469CF21A93FEA00A31F35 /* ConvenientPack.h */,
 				603469D021A93FEA00A31F35 /* Info.plist */,
 			);
 			path = ConvenientPack;
+			sourceTree = "<group>";
+		};
+		60E86B0821A9460B00699506 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				60E86B0921A9461500699506 /* RxCocoa.framework */,
+				60E86B0A21A9461500699506 /* RxSwift.framework */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +111,7 @@
 				603469C821A93FEA00A31F35 /* Sources */,
 				603469C921A93FEA00A31F35 /* Frameworks */,
 				603469CA21A93FEA00A31F35 /* Resources */,
+				60E86B0D21A9461B00699506 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -95,6 +133,7 @@
 				TargetAttributes = {
 					603469CB21A93FEA00A31F35 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -125,11 +164,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60E86B0D21A9461B00699506 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		603469C821A93FEA00A31F35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E86B0221A9427300699506 /* XibInstantiatable.swift in Sources */,
+				60E86B0121A9427300699506 /* RepositoryInjectableViewModel.swift in Sources */,
+				60E86B0621A9427300699506 /* RootViewController.swift in Sources */,
+				60E86B0521A9427300699506 /* UIViewController+extension.swift in Sources */,
+				60E86B0421A9427300699506 /* ReactiveModal.swift in Sources */,
+				60E86B0321A9427300699506 /* ViewModelInjectable.swift in Sources */,
+				60E86B0721A9427300699506 /* uninitialized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +330,17 @@
 		603469D521A93FEA00A31F35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ConvenientPack/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -278,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.yura.ConvenientPack;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,12 +361,17 @@
 		603469D621A93FEA00A31F35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ConvenientPack/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

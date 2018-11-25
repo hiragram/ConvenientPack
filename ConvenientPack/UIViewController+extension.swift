@@ -15,6 +15,13 @@ public extension ViewModelInjectable where Self: UIViewController & XibInstantia
     }
 }
 
+public extension ViewModelInjectable where Self: UIViewController & StoryboardInstantiatable {
+    init(repository: (() -> ViewModel.Repository)) {
+        self = Self.instantiateFromStoryboard()
+        viewModel = ViewModel.init(repository: repository())
+    }
+}
+
 public extension UIViewController {
     func embedInNavigationController() -> UINavigationController {
         return UINavigationController.init(rootViewController: self)

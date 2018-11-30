@@ -9,17 +9,31 @@
 import UIKit
 import RxSwift
 
-protocol ReactiveModal where Self: UIViewController {
+public protocol ReactiveModal where Self: UIViewController {
     associatedtype Trait
     associatedtype Result
 
     var result: PrimitiveSequence<Trait, Result> { get }
+    var wrapsWithNavigationController: Bool { get }
 }
 
-extension ReactiveModal where Trait == CompletableTrait, Result == Never {
-    func presentModal(baseVC: UIViewController) -> Completable {
-        return Completable.create(subscribe: { [unowned self] (observer) -> Disposable in
-            baseVC.present(UINavigationController.init(rootViewController: self), animated: true, completion: nil)
+public extension ReactiveModal {
+    var wrapsWithNavigationController: Bool {
+        return true
+    }
+}
+
+public extension ReactiveModal where Trait == CompletableTrait, Result == Never {
+    public func presentModal(baseVC: UIViewController) -> Completable {
+        return Completable.create(subscribe: { (observer) -> Disposable in
+            let vc: UIViewController
+            if self.wrapsWithNavigationController {
+                vc = UINavigationController.init(rootViewController: self)
+            } else {
+                vc = self
+            }
+
+            baseVC.present(vc, animated: true, completion: nil)
 
             return self.result
                 .do(onDispose: { [unowned self] in
@@ -30,10 +44,17 @@ extension ReactiveModal where Trait == CompletableTrait, Result == Never {
     }
 }
 
-extension ReactiveModal where Trait == SingleTrait {
-    func presentModal(baseVC: UIViewController) -> Single<Result> {
-        return Single.create(subscribe: { [unowned self] (observer) -> Disposable in
-            baseVC.present(UINavigationController.init(rootViewController: self), animated: true, completion: nil)
+public extension ReactiveModal where Trait == SingleTrait {
+    public func presentModal(baseVC: UIViewController) -> Single<Result> {
+        return Single.create(subscribe: { (observer) -> Disposable in
+            let vc: UIViewController
+            if self.wrapsWithNavigationController {
+                vc = UINavigationController.init(rootViewController: self)
+            } else {
+                vc = self
+            }
+
+            baseVC.present(vc, animated: true, completion: nil)
 
             return self.result
                 .do(onDispose: { [unowned self] in
@@ -44,10 +65,17 @@ extension ReactiveModal where Trait == SingleTrait {
     }
 }
 
-extension ReactiveModal where Trait == MaybeTrait {
-    func presentModal(baseVC: UIViewController) -> Maybe<Result> {
-        return Maybe.create(subscribe: { [unowned self] (observer) -> Disposable in
-            baseVC.present(UINavigationController.init(rootViewController: self), animated: true, completion: nil)
+public extension ReactiveModal where Trait == MaybeTrait {
+    public func presentModal(baseVC: UIViewController) -> Maybe<Result> {
+        return Maybe.create(subscribe: { (observer) -> Disposable in
+            let vc: UIViewController
+            if self.wrapsWithNavigationController {
+                vc = UINavigationController.init(rootViewController: self)
+            } else {
+                vc = self
+            }
+
+            baseVC.present(vc, animated: true, completion: nil)
 
             return self.result
                 .do(onDispose: { [unowned self] in

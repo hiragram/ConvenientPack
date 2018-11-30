@@ -11,6 +11,9 @@
 		607A0E6C21AAA74800F6904F /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0E6B21AAA74800F6904F /* StoryboardInstantiatable.swift */; };
 		607A0E7321AADE6C00F6904F /* LazyLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0E7221AADE6C00F6904F /* LazyLet.swift */; };
 		607A0E7B21AAEE0200F6904F /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0E7A21AAEE0200F6904F /* UITableView+extension.swift */; };
+		607A0EF021B1806C00F6904F /* CellsDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0EEF21B1806C00F6904F /* CellsDisposeBag.swift */; };
+		607A0EF221B182F700F6904F /* UIImageView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0EF121B182F700F6904F /* UIImageView+Rx.swift */; };
+		607A0EF421B1889A00F6904F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0EF321B1889A00F6904F /* WebViewController.swift */; };
 		60E86B0121A9427300699506 /* RepositoryInjectableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFA21A9427300699506 /* RepositoryInjectableViewModel.swift */; };
 		60E86B0221A9427300699506 /* XibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFB21A9427300699506 /* XibInstantiatable.swift */; };
 		60E86B0321A9427300699506 /* ViewModelInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E86AFC21A9427300699506 /* ViewModelInjectable.swift */; };
@@ -29,6 +32,9 @@
 		607A0E6B21AAA74800F6904F /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		607A0E7221AADE6C00F6904F /* LazyLet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyLet.swift; sourceTree = "<group>"; };
 		607A0E7A21AAEE0200F6904F /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		607A0EEF21B1806C00F6904F /* CellsDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsDisposeBag.swift; sourceTree = "<group>"; };
+		607A0EF121B182F700F6904F /* UIImageView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rx.swift"; sourceTree = "<group>"; };
+		607A0EF321B1889A00F6904F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		60E86AFA21A9427300699506 /* RepositoryInjectableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryInjectableViewModel.swift; sourceTree = "<group>"; };
 		60E86AFB21A9427300699506 /* XibInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibInstantiatable.swift; sourceTree = "<group>"; };
 		60E86AFC21A9427300699506 /* ViewModelInjectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelInjectable.swift; sourceTree = "<group>"; };
@@ -74,15 +80,18 @@
 			isa = PBXGroup;
 			children = (
 				60E86AFD21A9427300699506 /* ReactiveModal.swift */,
+				607A0EEF21B1806C00F6904F /* CellsDisposeBag.swift */,
 				607A0E7221AADE6C00F6904F /* LazyLet.swift */,
 				60E86AFA21A9427300699506 /* RepositoryInjectableViewModel.swift */,
 				60E86AFF21A9427300699506 /* RootViewController.swift */,
 				60E86AFE21A9427300699506 /* UIViewController+extension.swift */,
+				607A0EF121B182F700F6904F /* UIImageView+Rx.swift */,
 				60E86B0021A9427300699506 /* uninitialized.swift */,
 				60E86AFC21A9427300699506 /* ViewModelInjectable.swift */,
 				60E86AFB21A9427300699506 /* XibInstantiatable.swift */,
 				607A0E6B21AAA74800F6904F /* StoryboardInstantiatable.swift */,
 				607A0E7A21AAEE0200F6904F /* UITableView+extension.swift */,
+				607A0EF321B1889A00F6904F /* WebViewController.swift */,
 				603469CF21A93FEA00A31F35 /* ConvenientPack.h */,
 				603469D021A93FEA00A31F35 /* Info.plist */,
 			);
@@ -207,9 +216,12 @@
 				60E86B0521A9427300699506 /* UIViewController+extension.swift in Sources */,
 				60E86B0421A9427300699506 /* ReactiveModal.swift in Sources */,
 				607A0E6C21AAA74800F6904F /* StoryboardInstantiatable.swift in Sources */,
+				607A0EF021B1806C00F6904F /* CellsDisposeBag.swift in Sources */,
 				60E86B0321A9427300699506 /* ViewModelInjectable.swift in Sources */,
+				607A0EF221B182F700F6904F /* UIImageView+Rx.swift in Sources */,
 				607A0E7B21AAEE0200F6904F /* UITableView+extension.swift in Sources */,
 				607A0E7321AADE6C00F6904F /* LazyLet.swift in Sources */,
+				607A0EF421B1889A00F6904F /* WebViewController.swift in Sources */,
 				60E86B0721A9427300699506 /* uninitialized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

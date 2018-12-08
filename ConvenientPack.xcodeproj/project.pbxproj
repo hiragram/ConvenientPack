@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601090AB21BBB5AC000ECD70 /* SerialCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601090AA21BBB5AC000ECD70 /* SerialCounter.swift */; };
 		603469D121A93FEA00A31F35 /* ConvenientPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 603469CF21A93FEA00A31F35 /* ConvenientPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		607A0E6C21AAA74800F6904F /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0E6B21AAA74800F6904F /* StoryboardInstantiatable.swift */; };
 		607A0E7321AADE6C00F6904F /* LazyLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A0E7221AADE6C00F6904F /* LazyLet.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		601090AA21BBB5AC000ECD70 /* SerialCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialCounter.swift; sourceTree = "<group>"; };
 		603469CC21A93FEA00A31F35 /* ConvenientPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConvenientPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		603469CF21A93FEA00A31F35 /* ConvenientPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvenientPack.h; sourceTree = "<group>"; };
 		603469D021A93FEA00A31F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				60E86AFD21A9427300699506 /* ReactiveModal.swift */,
+				601090AA21BBB5AC000ECD70 /* SerialCounter.swift */,
 				607A0EEF21B1806C00F6904F /* CellsDisposeBag.swift */,
 				607A0E7221AADE6C00F6904F /* LazyLet.swift */,
 				60E86AFA21A9427300699506 /* RepositoryInjectableViewModel.swift */,
@@ -220,6 +223,7 @@
 				60E86B0321A9427300699506 /* ViewModelInjectable.swift in Sources */,
 				607A0EF221B182F700F6904F /* UIImageView+Rx.swift in Sources */,
 				607A0E7B21AAEE0200F6904F /* UITableView+extension.swift in Sources */,
+				601090AB21BBB5AC000ECD70 /* SerialCounter.swift in Sources */,
 				607A0E7321AADE6C00F6904F /* LazyLet.swift in Sources */,
 				607A0EF421B1889A00F6904F /* WebViewController.swift in Sources */,
 				60E86B0721A9427300699506 /* uninitialized.swift in Sources */,

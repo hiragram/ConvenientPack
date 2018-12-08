@@ -19,13 +19,13 @@ public extension XibInstantiatable {
 }
 
 public extension XibInstantiatable where Self: UIView {
-    init() {
-        self = UINib.init(nibName: Self.xibName, bundle: Bundle.init(for: Self.self)).instantiate(withOwner: nil, options: nil).first as! Self
+    public static func instantiateFromXib() -> Self {
+        return UINib.init(nibName: Self.xibName, bundle: Bundle.init(for: Self.self)).instantiate(withOwner: nil, options: nil).first as! Self
     }
 }
 
 public extension XibInstantiatable where Self: UIViewController {
-    init() {
-        self.init(nibName: Self.xibName, bundle: Bundle.init(for: Self.self))
+    public static func instantiateFromXib() -> Self {
+        return Self.init(nibName: Self.xibName, bundle: Bundle.init(for: Self.self))
     }
 }
